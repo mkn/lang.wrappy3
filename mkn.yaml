@@ -1,0 +1,15 @@
+
+
+name: lang.wrappy3
+version: master
+parent: base
+inc: include
+
+profile:
+- name: base
+  inc: include
+- name: lib   # won't work with MSVC
+  parent: base
+  arg: -D_WRAPPY_AS_LIB_
+  src: include/wrappy/detail/wrappy.ipp
+  lang: cpp

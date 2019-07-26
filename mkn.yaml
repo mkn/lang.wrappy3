@@ -8,8 +8,14 @@ inc: include
 profile:
 - name: base
   inc: include
-- name: lib   # won't work with MSVC
+- name: lib   # won't work with MSVC / lack of dll_export
   parent: base
   arg: -D_WRAPPY_AS_LIB_
   src: include/wrappy/detail/wrappy.ipp
   lang: cpp
+- name: test
+  inc: tests
+  parent: base
+  dep: google.test
+  main: test.cpp
+  mod: lang.python3

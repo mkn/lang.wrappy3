@@ -19,3 +19,6 @@ profile:
   dep: google.test
   main: test.cpp
   mod: lang.python3
+  env: |
+      MKN_LIB_LINK_LIB=1
+      MKN_PYTHON_LIB_EMBED=1

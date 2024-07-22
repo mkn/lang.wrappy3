@@ -29,6 +29,4 @@ jobs:
         set -exu
         curl -Lo mkn https://github.com/mkn/mkn/releases/download/latest/mkn_nix
         chmod +x mkn
-        KLOG=3 ./mkn clean build -dtgOp test -a "-fPIC -std=c++17"
-
-
+        KLOG=3 ./mkn clean build -dtgOp test -a "-fPIC -std=c++17" run
